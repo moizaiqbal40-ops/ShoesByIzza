@@ -1,6 +1,3 @@
-/* =========================================================
-   IZZA — Custom theme, layered on top of Bootstrap 5
-   ========================================================= */
 
 :root{
   --paper:      #FBF1EA;
@@ -151,7 +148,7 @@ a{ text-decoration: none; }
 }
 .hero-heading{ font-size: clamp(2.6rem, 8vw, 5.2rem); font-style: italic; line-height: 1.02; }
 
-/* ===================== CHIPS / FILTERS ===================== */
+/* ===================== FILTERS ===================== */
 .chip{
   border: 1.5px solid var(--line); background: var(--card); color: var(--ink-soft);
   border-radius: 999px; padding: .55rem 1.1rem; font-weight: 600; font-size: .85rem;
@@ -281,7 +278,7 @@ footer.site-footer .footer-bottom{ border-top: 1px solid rgba(255,255,255,.14); 
 /* ===================== TOAST ===================== */
 .toast-izza{ background: var(--ink); color: #fff; border-radius: 999px; }
 
-/* ===================== SCROLL REVEAL (safe: visible by default) ===================== */
+/* ===================== SCROLL REVEAL ===================== */
 /* If JS never runs, [data-reveal] elements stay fully visible (this rule only). */
 [data-reveal]{ opacity: 1; transform: none; }
 /* Only once JS confirms it's running does it add .reveal-on to <html>, which then
@@ -292,7 +289,7 @@ footer.site-footer .footer-bottom{ border-top: 1px solid rgba(255,255,255,.14); 
 }
 .reveal-on [data-reveal].revealed{ opacity: 1; transform: none; }
 
-/* ===================== EDITORIAL / LOOKBOOK TILES ===================== */
+/* ==================== LOOKBOOK TILES ===================== */
 .editorial-tile{
   position: relative; border-radius: var(--radius-lg); overflow: hidden;
   aspect-ratio: 4/5; background: var(--blush); display: block;
