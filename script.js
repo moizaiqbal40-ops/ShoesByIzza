@@ -1,12 +1,4 @@
 /* =========================================================
-   IZZA — Shared Product Data
-
-   Using placeholder photos for now so the site works out of
-   the box. To swap in your own product photos: replace each
-   URL below with a local path like "images/products/p1-1.jpg"
-   and drop your matching image files into images/products/.
-   Every product needs an `images` array of 3 — if you only
-   have 1 photo per product, repeat the same path 3 times.
    ========================================================= */
 
 const PK_SIZES = ["UK 3 · EU 36","UK 4 · EU 37","UK 5 · EU 38","UK 6 · EU 39","UK 7 · EU 40"];
@@ -465,11 +457,7 @@ function getProductById(id){
 function getRelatedProducts(product, limit = 4){
   return PRODUCTS.filter(p => p.category === product.category && p.id !== product.id).slice(0, limit);
 }
-/* =========================================================
-   IZZA — Shared cart logic + interactions (all pages)
-   Cart persists across pages via localStorage so it behaves
-   like a real store. Falls back to an in-memory cart if
-   localStorage is unavailable in the current environment.
+/* ========================================================
    ========================================================= */
 
 const CART_KEY = "izza_cart_v1";
@@ -724,15 +712,7 @@ function productCardHTML(p, opts = {}){
   </div>`;
 }
 
-/* =========================================================
-   Scroll reveal — progressive enhancement, never hides content
-   if JS fails to run. See the [data-reveal] rules in style.css.
-
-   IMPORTANT: this includes a hard safety-net timeout. Some
-   preview/sandboxed environments don't fire IntersectionObserver
-   callbacks reliably, so we never depend on it alone — every
-   [data-reveal] element is force-revealed shortly after it
-   appears, animation or not.
+/* ========================================================
    ========================================================= */
 function revealAllNow(){
   document.querySelectorAll("[data-reveal]:not(.revealed)").forEach(el => el.classList.add("revealed"));
