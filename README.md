@@ -63,4 +63,4 @@ Product data (name, price, images, description, etc.) lives in one place — the
 
 ## Author
 
-Built as a front-end web development portfolio project.
+Built as a front-end web development project.
