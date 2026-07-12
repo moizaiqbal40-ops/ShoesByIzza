@@ -1,0 +1,329 @@
+/* =========================================================
+   IZZA — Custom theme, layered on top of Bootstrap 5
+   ========================================================= */
+
+:root{
+  --paper:      #FBF1EA;
+  --ink:        #201220;
+  --ink-soft:   #74616E;
+  --pink:       #E63E72;
+  --pink-deep:  #C22A5A;
+  --pink-soft:  #F7B9CE;
+  --blush:      #F5DCE4;
+  --gold:       #C9963B;
+  --card:       #FFFFFF;
+  --line:       #EBDCDF;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Manrope', sans-serif;
+
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 28px;
+  --shadow: 0 24px 48px -22px rgba(32,18,32,0.28);
+  --shadow-sm: 0 10px 24px -14px rgba(32,18,32,0.3);
+}
+
+html{ scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
+
+body{
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+h1, h2, h3, h4, .font-display{
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.text-pink{ color: var(--pink) !important; }
+.text-ink-soft{ color: var(--ink-soft) !important; }
+.bg-paper{ background: var(--paper) !important; }
+.bg-ink{ background: var(--ink) !important; }
+.bg-blush{ background: var(--blush) !important; }
+
+a{ text-decoration: none; }
+
+::selection{ background: var(--pink-soft); color: var(--ink); }
+
+/* ===================== EYEBROW / TAG ===================== */
+.eyebrow{
+  display: inline-flex; align-items: center; gap: .4em;
+  font-family: var(--font-body); font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; font-size: .72rem; color: var(--pink-deep);
+  padding: .35rem .95rem; border: 1.5px solid var(--pink); border-radius: 999px;
+}
+
+/* ===================== BUTTONS ===================== */
+.btn-izza{
+  font-family: var(--font-body); font-weight: 700; font-size: .92rem;
+  border-radius: 999px; padding: .7rem 1.8rem; min-height: 48px;
+  display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  transition: transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
+  border-width: 2px;
+}
+.btn-izza:active{ transform: translateY(1px) scale(.98); }
+.btn-izza-dark{ background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.btn-izza-dark:hover{ background: var(--pink); border-color: var(--pink); color: #fff; }
+.btn-izza-outline{ background: transparent; border-color: var(--ink); color: var(--ink); }
+.btn-izza-outline:hover{ background: var(--ink); color: var(--paper); }
+.btn-izza-pink{ background: var(--pink); border-color: var(--pink); color: #fff; }
+.btn-izza-pink:hover{ background: var(--pink-deep); border-color: var(--pink-deep); color: #fff; }
+
+.btn:focus-visible, a:focus-visible, .form-control:focus-visible{
+  outline: 3px solid var(--pink); outline-offset: 2px;
+}
+.form-control:focus, .form-select:focus{
+  border-color: var(--pink); box-shadow: 0 0 0 .2rem rgba(230,62,114,.15);
+}
+
+/* ===================== TICKER ===================== */
+.ticker{
+  background: var(--ink); color: var(--paper); overflow: hidden; white-space: nowrap;
+  font-weight: 700; font-size: .76rem; letter-spacing: .1em; text-transform: uppercase;
+}
+.ticker-track{ display: inline-flex; gap: 2.4rem; padding: .6rem 0; animation: scroll-left 24s linear infinite; }
+.ticker-track span{ display: inline-flex; align-items: center; gap: 2.4rem; }
+.ticker b{ color: var(--pink-soft); }
+@keyframes scroll-left{ 0%{ transform: translateX(0);} 100%{ transform: translateX(-50%);} }
+@media (prefers-reduced-motion: reduce){ .ticker-track{ animation: none; } }
+
+/* ===================== NAVBAR ===================== */
+.navbar-izza{
+  background: var(--paper);
+  border-bottom: 1.5px solid var(--line);
+}
+.navbar-izza .navbar-brand{
+  font-family: var(--font-display); font-style: italic; font-weight: 600; font-size: 1.6rem; color: var(--ink);
+}
+.navbar-izza .navbar-brand span{ color: var(--pink); }
+.navbar-izza .nav-link{
+  font-weight: 600; font-size: .92rem; color: var(--ink); padding-bottom: .3rem;
+  border-bottom: 2px solid transparent; margin-inline: .4rem;
+}
+.navbar-izza .nav-link:hover, .navbar-izza .nav-link.active{ color: var(--pink-deep); border-color: var(--pink); }
+.icon-btn{
+  width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid var(--ink);
+  background: var(--card); display: inline-flex; align-items: center; justify-content: center;
+  color: var(--ink); position: relative;
+}
+.icon-btn:hover{ background: var(--ink); color: var(--paper); }
+.cart-count-pill{
+  position: absolute; top: -6px; right: -6px; background: var(--pink); color: #fff;
+  font-size: .68rem; font-weight: 800; min-width: 19px; height: 19px; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center; padding: 0 4px;
+}
+
+/* ===================== OFFCANVAS CART ===================== */
+.offcanvas-izza{ background: var(--paper); color: var(--ink); }
+.offcanvas-izza .offcanvas-header{ border-bottom: 1.5px solid var(--line); }
+.offcanvas-izza .offcanvas-title{ font-family: var(--font-display); font-style: italic; font-size: 1.4rem; }
+.cart-row{
+  background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius-sm);
+  padding: .7rem .8rem; display: flex; align-items: center; gap: .8rem;
+}
+.cart-row h6{ font-family: var(--font-display); font-style: italic; margin: 0 0 .15rem; }
+.qty-btn{
+  width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--ink);
+  background: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700;
+}
+.qty-btn:hover{ background: var(--ink); color: #fff; }
+
+/* ===================== HERO ===================== */
+.hero-section{ overflow: hidden; }
+.hero-visual{
+  position: relative; border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--blush); box-shadow: var(--shadow); aspect-ratio: 4/3;
+}
+.hero-visual::before{
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(circle at 30% 25%, var(--pink-soft) 0%, transparent 60%); opacity: .75;
+}
+.hero-visual img{ width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1; }
+.hero-badge{
+  position: absolute; top: 1rem; right: 1rem; z-index: 2; background: var(--pink); color: #fff;
+  font-family: var(--font-display); font-size: .8rem; text-align: center; line-height: 1.15;
+  border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 24px -10px rgba(198,42,90,.6);
+}
+.hero-heading{ font-size: clamp(2.6rem, 8vw, 5.2rem); font-style: italic; line-height: 1.02; }
+
+/* ===================== CHIPS / FILTERS ===================== */
+.chip{
+  border: 1.5px solid var(--line); background: var(--card); color: var(--ink-soft);
+  border-radius: 999px; padding: .55rem 1.1rem; font-weight: 600; font-size: .85rem;
+  white-space: nowrap;
+}
+.chip.active{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.chip-pink.active{ background: var(--pink); border-color: var(--pink); }
+.filter-label{ font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); }
+
+/* ===================== PRODUCT CARDS ===================== */
+.product-card{
+  background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius-lg);
+  overflow: hidden; height: 100%; transition: box-shadow .2s ease, transform .2s ease;
+}
+.product-card:hover{ box-shadow: var(--shadow); transform: translateY(-4px); }
+.product-card .card-media{ position: relative; aspect-ratio: 1/1; background: var(--blush); overflow: hidden; }
+.product-card .card-media img{ width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.product-card:hover .card-media img{ transform: scale(1.06); }
+.product-card .badge-num{
+  position: absolute; top: .7rem; left: .7rem; background: var(--card); color: var(--ink);
+  font-family: var(--font-display); font-style: italic; font-size: .85rem; width: 34px; height: 34px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+.product-card .ribbon-tag{
+  position: absolute; top: .7rem; right: .7rem; z-index: 2;
+  font-size: .64rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
+  padding: .32rem .6rem; border-radius: 999px; color: #fff;
+}
+.ribbon-bestseller{ background: var(--ink); }
+.ribbon-new{ background: var(--pink); }
+.product-card{ position: relative; }
+.card-actions{
+  position: absolute; top: 3.1rem; right: .7rem; z-index: 3;
+  display: flex; flex-direction: column; gap: .5rem;
+}
+.wishlist-btn{
+  width: 34px; height: 34px; border-radius: 50%; border: none; background: var(--card);
+  display: flex; align-items: center; justify-content: center; color: var(--ink-soft);
+  box-shadow: var(--shadow-sm); transition: color .15s ease, transform .15s ease;
+}
+.wishlist-btn:hover{ transform: scale(1.08); color: var(--pink); }
+.wishlist-btn.active{ color: var(--pink); }
+.quickview-btn{
+  width: 34px; height: 34px; border-radius: 50%; border: none; background: var(--card);
+  display: flex; align-items: center; justify-content: center; color: var(--ink-soft);
+  box-shadow: var(--shadow-sm); transition: color .15s ease, transform .15s ease, background .15s ease;
+}
+.quickview-btn:hover{ transform: scale(1.08); color: #fff; background: var(--ink); }
+.heel-pill{
+  font-size: .64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--pink-deep); background: var(--blush); padding: .18rem .55rem; border-radius: 999px;
+}
+.rating-line{ color: var(--gold); font-size: .78rem; display: flex; align-items: center; gap: .15rem; }
+.rating-line i{ font-size: .78rem; }
+.rating-count{ color: var(--ink-soft); font-size: .78rem; margin-left: .3rem; }
+.product-card .card-body{ display: flex; flex-direction: column; }
+.product-card .card-body{ padding: 1.1rem 1.2rem 1.3rem; }
+.product-card h3, .product-card h5{ font-family: var(--font-display); font-style: italic; }
+.card-meta{ font-size: .76rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
+.price-tag{ font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; }
+.add-btn{
+  width: 42px; height: 42px; border-radius: 50%; background: var(--ink); color: #fff; border: none;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 1.3rem;
+}
+.add-btn:hover{ background: var(--pink); }
+
+/* ===================== VALUES BAND ===================== */
+.values-band{ background: var(--ink); color: var(--paper); border-radius: var(--radius-lg); }
+.values-band .eyebrow{ color: var(--pink-soft); border-color: var(--pink-soft); }
+.value-num{ font-family: var(--font-display); font-style: italic; font-size: 2.1rem; color: var(--pink-soft); }
+.values-band h4{ color: #fff; }
+.values-band p{ color: #D8C4CE; }
+
+/* ===================== TESTIMONIAL ===================== */
+.testimonial-quote{
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: clamp(1.3rem, 2.8vw, 2rem); line-height: 1.35; max-width: 760px;
+}
+.testimonial-cite{ font-weight: 700; font-size: .85rem; color: var(--pink-deep); text-transform: uppercase; letter-spacing: .05em; }
+
+/* ===================== NEWSLETTER ===================== */
+.newsletter-band{ background: var(--pink); color: #fff; border-radius: var(--radius-lg); }
+.newsletter-band input{ border-radius: 999px; border: none; min-height: 48px; padding: 0 1.2rem; }
+
+/* ===================== FOOTER ===================== */
+footer.site-footer{ background: var(--ink); color: #D8C4CE; }
+footer.site-footer h6{ color: #fff; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+footer.site-footer a{ color: #D8C4CE; }
+footer.site-footer a:hover{ color: var(--pink-soft); }
+footer.site-footer .footer-bottom{ border-top: 1px solid rgba(255,255,255,.14); font-size: .78rem; color: #9E8B96; }
+
+/* ===================== BREADCRUMB ===================== */
+.breadcrumb-izza a{ color: var(--ink-soft); font-weight: 600; font-size: .85rem; }
+.breadcrumb-izza a:hover{ color: var(--pink); }
+.breadcrumb-izza .divider{ color: var(--line); }
+
+/* ===================== PRODUCT DETAIL PAGE ===================== */
+.gallery-main{
+  border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 1/1; background: var(--blush);
+  box-shadow: var(--shadow-sm);
+}
+.gallery-main img{ width: 100%; height: 100%; object-fit: cover; }
+.gallery-thumb{
+  border-radius: var(--radius-sm); overflow: hidden; aspect-ratio: 1/1; cursor: pointer;
+  border: 2px solid transparent; background: var(--blush);
+}
+.gallery-thumb img{ width: 100%; height: 100%; object-fit: cover; }
+.gallery-thumb.active{ border-color: var(--pink); }
+.size-chip{
+  min-width: 84px; min-height: 40px; padding: 0 .7rem;
+  border: 1.5px solid var(--line); border-radius: var(--radius-sm);
+  background: #fff; font-weight: 700; font-size: .78rem; color: var(--ink-soft); white-space: nowrap;
+}
+.size-chip.active{ background: var(--ink); border-color: var(--ink); color: #fff; }
+.qty-stepper{ display: inline-flex; align-items: center; border: 1.5px solid var(--line); border-radius: 999px; overflow: hidden; }
+.qty-stepper button{ width: 44px; height: 44px; border: none; background: #fff; font-size: 1.1rem; font-weight: 700; }
+.qty-stepper button:hover{ background: var(--blush); }
+.qty-stepper span{ min-width: 40px; text-align: center; font-weight: 700; }
+
+.accordion-izza .accordion-button{
+  font-weight: 700; font-size: .95rem; background: var(--card); color: var(--ink);
+}
+.accordion-izza .accordion-button:not(.collapsed){ background: var(--blush); color: var(--pink-deep); box-shadow: none; }
+.accordion-izza .accordion-button:focus{ box-shadow: 0 0 0 .2rem rgba(230,62,114,.15); }
+
+/* ===================== TOAST ===================== */
+.toast-izza{ background: var(--ink); color: #fff; border-radius: 999px; }
+
+/* ===================== SCROLL REVEAL (safe: visible by default) ===================== */
+/* If JS never runs, [data-reveal] elements stay fully visible (this rule only). */
+[data-reveal]{ opacity: 1; transform: none; }
+/* Only once JS confirms it's running does it add .reveal-on to <html>, which then
+   hides elements briefly before animating them in on scroll. */
+.reveal-on [data-reveal]{
+  opacity: 0; transform: translateY(22px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal-on [data-reveal].revealed{ opacity: 1; transform: none; }
+
+/* ===================== EDITORIAL / LOOKBOOK TILES ===================== */
+.editorial-tile{
+  position: relative; border-radius: var(--radius-lg); overflow: hidden;
+  aspect-ratio: 4/5; background: var(--blush); display: block;
+}
+.editorial-tile img{
+  width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease;
+}
+.editorial-tile:hover img{ transform: scale(1.05); }
+.editorial-tile::after{
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(32,18,32,.55) 0%, rgba(32,18,32,0) 45%);
+  pointer-events: none;
+}
+.editorial-caption{
+  position: absolute; left: 1.4rem; right: 1.4rem; bottom: 1.3rem; z-index: 2; color: #fff;
+}
+.editorial-caption .eyebrow{ color: var(--pink-soft); border-color: var(--pink-soft); background: rgba(32,18,32,.3); }
+.editorial-caption h3{ color: #fff; margin-bottom: .2rem; }
+.editorial-caption .price-tag{ color: #fff; }
+.editorial-actions{
+  position: absolute; top: 1rem; right: 1rem; z-index: 3; display: flex; flex-direction: column; gap: .6rem;
+}
+.editorial-icon-btn{
+  width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,.92); border: none;
+  display: flex; align-items: center; justify-content: center; color: var(--ink);
+  box-shadow: var(--shadow-sm); transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+.editorial-icon-btn:hover{ background: var(--pink); color: #fff; transform: scale(1.06); }
+.editorial-icon-btn.active{ background: var(--pink); color: #fff; }
+
+/* ===================== EMPTY STATES ===================== */
+.empty-state{
+  text-align: center; padding: 3rem 1rem; color: var(--ink-soft);
+}
