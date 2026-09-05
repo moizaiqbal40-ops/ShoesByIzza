@@ -30,6 +30,10 @@ ShoesByIzza/
 ├── cart.html
 ├── style.css
 ├── script.js
+├── home.png
+├── heels.png
+├── store.png
+├── mobile.png
 └── images/
 ```
 
@@ -52,16 +56,15 @@ cd ShoesByIzza
 No installation or build process is required.
 
 ## 📸 Screenshots
-## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshots/home.png" width="48%" />
-  <img src="screenshots/heels.png" width="48%" />
+  <img src="home.png" alt="IZZA home page" width="48%" />
+  <img src="heels.png" alt="IZZA heels collection" width="48%" />
 </p>
 
 <p align="center">
-  <img src="screenshots/store.png" width="48%" />
-  <img src="screenshots/mobile.png" width="48%" />
+  <img src="store.png" alt="IZZA store page" width="48%" />
+  <img src="mobile.png" alt="IZZA mobile responsive view" width="48%" />
 </p>
 
 > Good design should make the experience feel simple.
