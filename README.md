@@ -1,6 +1,7 @@
 <h1 align="center">IZZA — Women's Footwear Store</h1>
-
-A responsive e-commerce website for browsing and shopping women's footwear with a simple, clean interface.
+<p align="center">
+  A modern women's footwear e-commerce website built with PHP, MySQL, HTML, CSS & JavaScript.
+</p>
 
 ## ✨ Features
 
