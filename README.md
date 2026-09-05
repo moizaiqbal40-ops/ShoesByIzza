@@ -1,4 +1,4 @@
-# IZZA — Women's Footwear Store
+<h1 align="center">IZZA — Women's Footwear Store</h1>
 
 A responsive e-commerce website for browsing and shopping women's footwear with a simple, clean interface.
 
