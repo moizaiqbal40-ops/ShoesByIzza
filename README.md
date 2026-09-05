@@ -1,66 +1,93 @@
-# IZZA — Women's Footwear Store
+<div align="center">
 
-A fully responsive, multi-page e-commerce front-end for a women's shoe store, built as a front-end web development portfolio project.
+# 👠 IZZA
 
-**🔗 Live Demo:** _add your GitHub Pages link here once enabled — see steps below_
+### A modern and responsive online footwear store.
 
----
+</div>
 
-## Overview
+<br>
 
-IZZA is a mock e-commerce storefront featuring a full shopping experience — product browsing, filtering, search, a quick-view modal, a shopping bag, and a checkout flow — built entirely with **HTML, CSS, and vanilla JavaScript** (no frameworks, no build tools).
+<table>
+<tr>
+<td width="100%">
 
-## Features
+## ✨ FEATURES
 
-- 🛍️ **Multi-page storefront** — Home, Shop (catalogue), Product Detail, and Cart/Checkout
-- 🔍 **Search** — live search on the shop page + a global search modal in the navbar
-- 🎯 **Filtering & sorting** — by category, heel height, and price
-- 👗 **34 products** across Heels, Flats, Sneakers, Sandals, and Boots
-- ⭐ **Product ratings**, wishlist (heart) saving, and "Bestseller"/"New" tags
-- 👁️ **Quick View modal** — preview and add a product to the bag without leaving the page
-- 🛒 **Persistent shopping bag** (via `localStorage`) that carries across every page
-- 📱 **Fully responsive** — mobile, tablet, and desktop layouts
-- 🇵🇰 **Pakistani sizing** — UK and EU size equivalents shown together
-- ♿ **Accessible** — semantic HTML, ARIA labels, keyboard-friendly controls
+</td>
+</tr>
+</table>
 
-## Tech Stack
+- 🛍️ Browse footwear across different categories
+- 🔎 Search, filter, and sort products
+- 👁️ View products through quick preview
+- ❤️ Save favorite products to a wishlist
+- 🛒 Add products to a persistent shopping bag
+- 📱 Responsive experience across mobile, tablet, and desktop
 
-- HTML5 & CSS3 (custom design system, no CSS framework overrides beyond Bootstrap utilities)
-- [Bootstrap 5.3](https://getbootstrap.com/) — layout grid, offcanvas cart, modals, accordion
-- [Bootstrap Icons](https://icons.getbootstrap.com/)
-- Vanilla JavaScript (ES6) — no frameworks, no build step
-- Google Fonts — Fraunces (display) & Manrope (body)
+<br>
 
-## Project Structure
+<table>
+<tr>
+<td width="100%">
 
-```
-izza-store/
-├── index.html      # Homepage — hero, categories, lookbook, bestsellers, FAQ
-├── shop.html        # Full catalogue with search, filters & sorting
-├── product.html      # Dynamic product detail page (?id=<product-id>)
-├── cart.html        # Bag review & checkout flow
-├── style.css       # Shared styles for all pages
-├── script.js        # Shared product data + cart/wishlist/UI logic
+## 🛠️ TECH STACK
+
+</td>
+</tr>
+</table>
+
+- **HTML5** — page structure
+- **CSS3** — custom styling and responsive design
+- **JavaScript (ES6)** — product and shopping logic
+- **Bootstrap 5.3** — layout and UI components
+- **Bootstrap Icons** — interface icons
+- **localStorage** — cart and wishlist persistence
+
+<br>
+
+<table>
+<tr>
+<td width="100%">
+
+## 📁 PROJECT STRUCTURE
+
+</td>
+</tr>
+</table>
+
+```text
+ShoesByIzza/
+├── index.html
+├── shop.html
+├── product.html
+├── cart.html
+├── style.css
+├── script.js
 └── images/
-    └── products/      # Drop your own product photos here (see README.txt inside)
-```
+    └── products/
+<br> <table> <tr> <td width="100%">
+🚀 HOW TO RUN
+</td> </tr> </table>
+1. Clone the repository
+git clone https://github.com/moizaiqbal40-ops/ShoesByIzza.git
+2. Open the project
+cd ShoesByIzza
+3. Run locally
 
-All pages share a single `style.css` and `script.js` — no duplicated code.
+No installation or build step is required.
 
-## Running Locally
+Open index.html directly in your browser, or use a local server:
 
-No build step or dependencies required. Just open `index.html` in any modern browser, or serve the folder with any static server, e.g.:
-
-```bash
 python3 -m http.server 8000
-```
 
-then visit `http://localhost:8000`.
+Then open:
 
-## Swapping in Real Product Photos
+http://localhost:8000
+<br> <table> <tr> <td width="100%">
+📸 SCREENSHOTS
+</td> </tr> </table> <p align="center"> <!-- Add project screenshots or GIFs here --> <img src="screenshots/home.png" alt="IZZA Homepage" width="800"> </p> <br> <div align="center">
 
-Product data (name, price, images, description, etc.) lives in one place — the `PRODUCTS` array at the top of `script.js`. Replace any image URL with a local path like `images/products/p1-1.jpg` and drop your photo into that folder.
+"Good design makes technology feel simple."
 
-## Author
-
-Built as a front-end web development project.
+</div> ```
