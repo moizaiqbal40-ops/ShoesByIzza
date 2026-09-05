@@ -1,60 +1,26 @@
-<div align="center">
+# IZZA — Women's Footwear Store
 
-# 👠 IZZA
+A responsive e-commerce website for browsing and shopping women's footwear with a simple, clean interface.
 
-### A modern and responsive online footwear store.
+## ✨ Features
 
-</div>
+* Browse footwear by category
+* Search, filter, and sort products
+* Quick product preview
+* Wishlist functionality
+* Shopping bag with saved items
+* Responsive design for different screen sizes
 
-<br>
+## 🛠️ Tech Stack
 
-<table>
-<tr>
-<td width="100%">
+* **HTML5** — structure
+* **CSS3** — styling and responsive layout
+* **JavaScript (ES6)** — interactions and application logic
+* **Bootstrap 5.3** — responsive components and layout
+* **Bootstrap Icons** — interface icons
+* **localStorage** — wishlist and shopping bag persistence
 
-## ✨ FEATURES
-
-</td>
-</tr>
-</table>
-
-- 🛍️ Browse footwear across different categories
-- 🔎 Search, filter, and sort products
-- 👁️ View products through quick preview
-- ❤️ Save favorite products to a wishlist
-- 🛒 Add products to a persistent shopping bag
-- 📱 Responsive experience across mobile, tablet, and desktop
-
-<br>
-
-<table>
-<tr>
-<td width="100%">
-
-## 🛠️ TECH STACK
-
-</td>
-</tr>
-</table>
-
-- **HTML5** — page structure
-- **CSS3** — custom styling and responsive design
-- **JavaScript (ES6)** — product and shopping logic
-- **Bootstrap 5.3** — layout and UI components
-- **Bootstrap Icons** — interface icons
-- **localStorage** — cart and wishlist persistence
-
-<br>
-
-<table>
-<tr>
-<td width="100%">
-
-## 📁 PROJECT STRUCTURE
-
-</td>
-</tr>
-</table>
+## 📁 Project Structure
 
 ```text
 ShoesByIzza/
@@ -65,29 +31,30 @@ ShoesByIzza/
 ├── style.css
 ├── script.js
 └── images/
-    └── products/
-<br> <table> <tr> <td width="100%">
-🚀 HOW TO RUN
-</td> </tr> </table>
-1. Clone the repository
+```
+
+## 🚀 How to Run
+
+1. Clone the repository:
+
+```bash
 git clone https://github.com/moizaiqbal40-ops/ShoesByIzza.git
-2. Open the project
+```
+
+2. Open the project folder:
+
+```bash
 cd ShoesByIzza
-3. Run locally
+```
 
-No installation or build step is required.
+3. Open `index.html` in your browser.
 
-Open index.html directly in your browser, or use a local server:
+No installation or build process is required.
 
-python3 -m http.server 8000
+## 📸 Screenshots
 
-Then open:
+<!-- Add project screenshots here -->
 
-http://localhost:8000
-<br> <table> <tr> <td width="100%">
-📸 SCREENSHOTS
-</td> </tr> </table> <p align="center"> <!-- Add project screenshots or GIFs here --> <img src="screenshots/home.png" alt="IZZA Homepage" width="800"> </p> <br> <div align="center">
+## 💭
 
-"Good design makes technology feel simple."
-
-</div> ```
+> Good design should make the experience feel simple.
