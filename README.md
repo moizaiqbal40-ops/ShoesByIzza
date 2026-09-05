@@ -52,9 +52,16 @@ cd ShoesByIzza
 No installation or build process is required.
 
 ## 📸 Screenshots
+## 📸 Screenshots
 
-<!-- Add project screenshots here -->
+<p align="center">
+  <img src="screenshots/home.png" width="48%" />
+  <img src="screenshots/heels.png" width="48%" />
+</p>
 
-## 💭
+<p align="center">
+  <img src="screenshots/store.png" width="48%" />
+  <img src="screenshots/mobile.png" width="48%" />
+</p>
 
 > Good design should make the experience feel simple.
